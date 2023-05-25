@@ -35,7 +35,15 @@ const Home = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const [selectedProduct, setSelectedProduct] = useState('');
+  const valueFromLocalStorage = localStorage.getItem('selectedValue');
+
+  const [selectedProduct, setSelectedProduct] = useState(valueFromLocalStorage ? valueFromLocalStorage : '');
+
+  
+
+  console.log("selectedValue777", localStorage.getItem('selectedValue'));
+
+  // localStorage.setItem('selectedValue', 'Tom');
 
   const products = useSelector(selectProductsList);
 
@@ -55,7 +63,7 @@ const Home = () => {
         monthsNames,
         optimizeSum,
         chooseTypeOfSum,
-        selectedProduct,
+        selectedProduct
       ),
       optimizeSum
     ),
@@ -65,6 +73,10 @@ const Home = () => {
   useEffect(() => {
     dispatch(getProducts());
   }, [dispatch]);
+
+  useEffect(() => {
+    localStorage.setItem('selectedValue', selectedProduct);
+  }, [selectedProduct]);
 
   return (
     <>
