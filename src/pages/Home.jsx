@@ -39,12 +39,6 @@ const Home = () => {
 
   const [selectedProduct, setSelectedProduct] = useState(valueFromLocalStorage ? valueFromLocalStorage : '');
 
-  
-
-  console.log("selectedValue777", localStorage.getItem('selectedValue'));
-
-  // localStorage.setItem('selectedValue', 'Tom');
-
   const products = useSelector(selectProductsList);
 
   const navigateHandler = (v) => {
