@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { ResponsiveContainer } from 'recharts';
 
+export const COLORS = ['#008001', '#fea500', '#fd0100', '#0100fe'];
+
 export const StyledResponsiveContainer = styled(ResponsiveContainer)`
   &&& {
     padding: 10px;
@@ -12,13 +14,6 @@ export const StyledResponsiveContainer = styled(ResponsiveContainer)`
 export const StyledResponsiveContainerPie = styled(ResponsiveContainer)`
   &&& {
     padding: 10px;
-
-    /* .recharts-wrapper {
-      height: 100% !important;
-
-      /* .recharts-surface {
-        height: 370px !important;
-      } */
   }
 `;
 
@@ -29,6 +24,18 @@ export const СenteredСontainerSelect = styled.div`
     justify-content: center;
     margin-top: 24px;
     margin-bottom: 24px;
+  }
+`;
+
+export const SelectСontainer = styled.div`
+  &&& {
+    float: right;
+  }
+`;
+
+export const StyledSelect = styled.select`
+  &&& {
+    margin-left: 14px;
   }
 `;
 

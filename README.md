@@ -1,3 +1,6 @@
+## Description
+Application for displaying statistics on factories and their products
+
 ## Instructions
 
 To run this project on localhost:
