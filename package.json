@@ -22,7 +22,7 @@
     "build": "react-scripts build",
     "dockerize": "docker-compose up -d",
     "start-container": "docker run ugmk_test_app-fe",
-    "remove-container": "docker stop ugmk && docker rm ugmk"
+    "remove-container": "docker rm -f $(docker ps -aqf 'ancestor=ugmk_test_app-fe') && docker rmi ugmk_test_app-fe"
   },
   "eslintConfig": {
     "extends": [

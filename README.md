@@ -22,7 +22,7 @@ To run docker container:
 npm run start-container
 ```
 
-To remove docker container:
+To remove the image and all docker containers that belong to this image:
 
 ```typescript
 npm run remove-container
